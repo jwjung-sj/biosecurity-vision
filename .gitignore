@@ -1,0 +1,23 @@
+# 보안 키 및 설정
+*.json
+*.ini
+admincreds.json
+mycreds.json
+farm_config.ini
+
+# 기타
+__pycache__/
+*.pyc
+*.pt
+venv/
+.env
+
+# 레거시(구버전) 코드 - 보안상 제외
+legacy/
+
+# 녹화영상 및 클립 영상
+recorded_videos/
+temp_clips/
+
+# 객체 모델
+model/
