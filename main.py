@@ -21,7 +21,8 @@ from lib.video_processor import process_video
 from lib.service_manager import DriveManager
 from lib.warning_client_manager import RPIClient, WebhookClient
 
-OUR_MODEL = 'lib/model/250912_s_best.pt'
+OUR_MODEL = 'lib/model/251120_s_best.pt'
+# OUR_MODEL = 'lib/model/250912_s_best.pt'
 
 # =========================================================
 # 1. 설정 로드 및 Factory 로직
@@ -32,7 +33,7 @@ def load_farm_config(config_path, farm_name):
         sys.exit(1)
 
     cfg = configparser.ConfigParser()
-    cfg.read(config_path)
+    cfg.read(config_path, encoding='utf-8')
     
     if farm_name not in cfg:
         print(f"❌ 설정 파일에 [{farm_name}] 섹션이 없습니다.")
